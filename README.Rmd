@@ -11,9 +11,10 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 # Put the project citation details here to include them in the file below.
-Title <- "Title of your paper goes here"
-Authors <- "Author list goes here"
-Year <- "Year of publication"
+Title <- "Osteoarthritis Diagnoses are Under-recorded in Primary Care Electronic Health Records in New Zealand"
+Authors <- "Ross Wilson, Rory McMahon Chistopherson, Yana Pryymachenko, Richelle Caya, Lívia Gaspar
+Fernandes, Yen Wei Lim, Moody Gayed, Andrés Pierobon, Tony Dowell, Ben Darlow, Jayden MacRae, J. Haxby Abbott"
+Year <- "2025"
 Journal <- "Name of journal/publication; Volume/Issue/Page numbers"
 DOI <- "Citation DOI"
 ```
@@ -29,6 +30,8 @@ The data files provided here are aggregated data obtained from the Stats NZ Inte
 The project uses [`{renv}`](https://rstudio.github.io/renv/index.html) for package version/dependency management, and [`{targets}`](https://books.ropensci.org/targets/) to specify the data analytic workflow. When opening the project for the first time, `{renv}` should prompt you to download and install the required package versions; if it does not, use `renv::restore()` to do this manually.
 
 The project pipeline can then be built using `targets::tar_make()` to recreate all of the tables and figures presented in the manuscript.
+
+This will create targets `res_descriptives`, the results for the cohort descriptive statistics table; `plt_trend` and `res_trend`, the figure (and underlying data) of the proportion of the cohort with a prior OA diagnosis over time; `plt_subgroups` and `res_subgroups`, the figure (and underlying data) comparing the proportion of the cohort with a prior OA diagnosis among different subgroups; and `plt_timing_joint` and `res_timing_joint`, the figure (and underlying data) of the timing of first OA diagnosis relative to date of surgery, by OA joint. After successfully running `targets::tar_make()`, any of these can be loaded into the R session using `targets::tar_load(<target-name>)`.
 
 ## How to cite
 

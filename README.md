@@ -25,6 +25,17 @@ if it does not, use `renv::restore()` to do this manually.
 The project pipeline can then be built using `targets::tar_make()` to
 recreate all of the tables and figures presented in the manuscript.
 
+This will create targets `res_descriptives`, the results for the cohort
+descriptive statistics table; `plt_trend` and `res_trend`, the figure
+(and underlying data) of the proportion of the cohort with a prior OA
+diagnosis over time; `plt_subgroups` and `res_subgroups`, the figure
+(and underlying data) comparing the proportion of the cohort with a
+prior OA diagnosis among different subgroups; and `plt_timing_joint` and
+`res_timing_joint`, the figure (and underlying data) of the timing of
+first OA diagnosis relative to date of surgery, by OA joint. After
+successfully running `targets::tar_make()`, any of these can be loaded
+into the R session using `targets::tar_load(<target-name>)`.
+
 ## How to cite
 
 This repository contains work-in-progress. Please do not cite.
