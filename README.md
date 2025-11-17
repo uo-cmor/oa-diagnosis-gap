@@ -13,16 +13,28 @@ provisions of the IDI. Access to the IDI may be made available by Stats
 NZ to approved New Zealand-based reseachers; see
 <https://stats.govt.nz/idi> for more information.
 
-### How to cite
+## How to use
+
+The project uses [`{renv}`](https://rstudio.github.io/renv/index.html)
+for package version/dependency management, and
+[`{targets}`](https://books.ropensci.org/targets/) to specify the data
+analytic workflow. When opening the project for the first time, `{renv}`
+should prompt you to download and install the required package versions;
+if it does not, use `renv::restore()` to do this manually.
+
+The project pipeline can then be built using `targets::tar_make()` to
+recreate all of the tables and figures presented in the manuscript.
+
+## How to cite
 
 This repository contains work-in-progress. Please do not cite.
 
 <!-- Update and uncomment this section once the work is citable
 &#10;Please cite this work as:
-&#10;> Author list goes here, (Year of publication). _Title of your paper goes here_. `Journal`. <https://doi.org/Citation DOI>
+&#10;> Author list goes here, (Year of publication). _Title of your paper goes here_. Name of journal/publication; Volume/Issue/Page numbers. <https://doi.org/Citation DOI>
 &#10;-->
 
-### How to download
+## How to download
 
 You can download this repository as a zip from:
 <https://github.com/uo-cmor/oa-diagnosis-gap/archive/master.zip>

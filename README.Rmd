@@ -24,7 +24,13 @@ This repository contains the data and code for our project estimating the rate o
 
 The data files provided here are aggregated data obtained from the Stats NZ Integrated Data Infrastructure (IDI). The underlying individual patient data are not publicly available due to confidentiality provisions of the IDI. Access to the IDI may be made available by Stats NZ to approved New Zealand-based reseachers; see <https://stats.govt.nz/idi> for more information.
 
-### How to cite
+## How to use
+
+The project uses [`{renv}`](https://rstudio.github.io/renv/index.html) for package version/dependency management, and [`{targets}`](https://books.ropensci.org/targets/) to specify the data analytic workflow. When opening the project for the first time, `{renv}` should prompt you to download and install the required package versions; if it does not, use `renv::restore()` to do this manually.
+
+The project pipeline can then be built using `targets::tar_make()` to recreate all of the tables and figures presented in the manuscript.
+
+## How to cite
 
 This repository contains work-in-progress. Please do not cite.
 
@@ -32,11 +38,11 @@ This repository contains work-in-progress. Please do not cite.
 
 Please cite this work as:
 
-> `r Authors`, (`r Year`). _`r Title`_. `Journal`. <https://doi.org/`r DOI`>
+> `r Authors`, (`r Year`). _`r Title`_. `r Journal`. <https://doi.org/`r DOI`>
 
 -->
 
-### How to download
+## How to download
 
 You can download this repository as a zip from: <https://github.com/uo-cmor/oa-diagnosis-gap/archive/master.zip>
 
